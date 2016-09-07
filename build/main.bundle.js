@@ -49,10 +49,8 @@
 	var _stylesOrder = __webpack_require__(1);
 	
 	var _stylesOrder2 = _interopRequireDefault(_stylesOrder);
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	console.log('yellow');
 
 /***/ },
 /* 1 */
@@ -60,14 +58,51 @@
 
 	"use strict";
 	
-	var _styles = __webpack_require__(2);
+	var _reset = __webpack_require__(2);
 	
-	var _styles2 = _interopRequireDefault(_styles);
+	var _reset2 = _interopRequireDefault(_reset);
+	
+	var _global = __webpack_require__(8);
+	
+	var _global2 = _interopRequireDefault(_global);
+	
+	var _header = __webpack_require__(10);
+	
+	var _header2 = _interopRequireDefault(_header);
+	
+	var _search = __webpack_require__(12);
+	
+	var _search2 = _interopRequireDefault(_search);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 9 */,
+/* 10 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 11 */,
+/* 12 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

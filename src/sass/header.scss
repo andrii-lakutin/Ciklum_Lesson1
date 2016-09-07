@@ -1,0 +1,59 @@
+$header: #EEDB59;
+$shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
+$twitter-bg: #1B95E0;
+$twitterAndQuestion: white;
+
+$font-header: 'Helvetica Neue',Arial,sans-serif;
+
+header {
+	position: fixed;
+	width: 100%; 
+	background: $header;
+	display: flex;
+	justify-content: space-between; 
+	a{
+		img{
+			width: 113px;
+			height: 113px;  
+		}
+	}
+	.headerMid{
+		align-self: center;
+		text-align: center;
+		img{
+			width: 200px; 
+			height: 50px; 
+		}
+		h1{
+			text-shadow: $shadow; 
+		}
+		a{
+			text-decoration: none;
+			color: #9e8c09;
+			text-shadow: $shadow;
+		}
+	}
+	.headerRight{
+		display: flex;
+		align-items: center;
+		.twitter{
+			font-family: $font-header; 
+			border-radius: 2px;  
+			text-align: center;
+			line-height: 20px;
+			font-weight: 600;  
+			font-size: 11px; 
+			background: $twitter-bg;
+			color: $twitterAndQuestion;
+			width: 62px;
+			height: 20px;  
+		}
+		.question{
+			margin-left: 30px;
+			margin-right: 50px;  
+			color: rgba($twitterAndQuestion, 0.9);
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+			font: bold 26px $font-header;
+		}
+	}
+}

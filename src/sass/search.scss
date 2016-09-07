@@ -1,0 +1,18 @@
+$background: #323330;
+
+.searchSection{
+	width: 1117px;
+	margin: 0 auto;  
+	padding-top: 150px; 
+	background: $background; 
+	.pythonBooks{
+		color: white;
+		.seeAlso{
+			float: left;
+		}
+		img{
+			width: 100px;
+			height: 16px;  
+		}
+	}
+}
