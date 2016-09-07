@@ -317,5 +317,44 @@ header .headerRight .question {
   text-decoration: underline;
 }
 
+.books {
+  min-height: 65vh;
+  max-width: 1117px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+.books .book {
+  max-width: 279px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 279px;
+          flex: 1 1 279px;
+}
+
+.books .book img {
+  width: 140px;
+  height: 184px;
+}
+
+.books .book h2 {
+  font: 400 16px 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  color: #efa121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.books .book .description {
+  height: 70px;
+}
+
 
 /*# sourceMappingURL=styles.css.map*/
