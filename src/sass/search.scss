@@ -1,6 +1,12 @@
 $background: #323330;
+$search-bg: #252624;
+$theme: #EEDB59;
+
+$main-font: 'Helvetica Neue',Arial,sans-serif;
 
 .searchSection{
+	font-family: $main-font;
+	font-size: 13px; 
 	width: 1117px;
 	margin: 0 auto;  
 	padding-top: 150px; 
@@ -13,6 +19,49 @@ $background: #323330;
 		img{
 			width: 100px;
 			height: 16px;  
+		}
+	}
+	.search{
+		display: flex;
+		margin-top: 15px;
+		// я попробовал заюзать &, но у меня не вышло) 
+		input{
+			cursor: pointer;
+			border: 0;
+			padding: 9px;
+		}
+		input[type="text"]{  
+			color: $theme;
+			flex: 6 1 auto; 
+			background: $search-bg;
+		}
+		input[type="button"]{
+			flex: 1 1 auto;
+			background: $theme;
+		}
+		input:focus{ 
+			outline: none; 
+		}
+		input::placeholder{ 
+			font-weight: 600;
+			color: $theme;
+			text-indent: 5px;
+			transition: text-indent 500ms cubic-bezier(.87,-.41,.19,1.441);
+		}
+		input:focus::placeholder{
+			text-indent: -300px;
+		}
+	}
+	.filter{
+		color: white;
+		margin-top: 20px; 
+		span{
+			cursor: pointer;
+			margin-left: 10px;
+			color: $theme; 
+		}
+		span:hover{
+			text-decoration: underline; 
 		}
 	}
 }

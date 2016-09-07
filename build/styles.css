@@ -201,6 +201,8 @@ header .headerRight .question {
 }
 
 .searchSection {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
   width: 1117px;
   margin: 0 auto;
   padding-top: 150px;
@@ -218,6 +220,101 @@ header .headerRight .question {
 .searchSection .pythonBooks img {
   width: 100px;
   height: 16px;
+}
+
+.searchSection .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.searchSection .search input {
+  cursor: pointer;
+  border: 0;
+  padding: 9px;
+}
+
+.searchSection .search input[type="text"] {
+  color: #EEDB59;
+  -webkit-box-flex: 6;
+      -ms-flex: 6 1 auto;
+          flex: 6 1 auto;
+  background: #252624;
+}
+
+.searchSection .search input[type="button"] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: #EEDB59;
+}
+
+.searchSection .search input:focus {
+  outline: none;
+}
+
+.searchSection .search input::-webkit-input-placeholder {
+  font-weight: 600;
+  color: #EEDB59;
+  text-indent: 5px;
+  -webkit-transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+  transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+}
+
+.searchSection .search input::-moz-placeholder {
+  font-weight: 600;
+  color: #EEDB59;
+  text-indent: 5px;
+  -webkit-transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+  transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+}
+
+.searchSection .search input:-ms-input-placeholder {
+  font-weight: 600;
+  color: #EEDB59;
+  text-indent: 5px;
+  -webkit-transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+  transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+}
+
+.searchSection .search input::placeholder {
+  font-weight: 600;
+  color: #EEDB59;
+  text-indent: 5px;
+  -webkit-transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+  transition: text-indent 500ms cubic-bezier(0.87, -0.41, 0.19, 1.441);
+}
+
+.searchSection .search input:focus::-webkit-input-placeholder {
+  text-indent: -300px;
+}
+
+.searchSection .search input:focus::-moz-placeholder {
+  text-indent: -300px;
+}
+
+.searchSection .search input:focus:-ms-input-placeholder {
+  text-indent: -300px;
+}
+
+.searchSection .search input:focus::placeholder {
+  text-indent: -300px;
+}
+
+.searchSection .filter {
+  color: white;
+  margin-top: 20px;
+}
+
+.searchSection .filter span {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #EEDB59;
+}
+
+.searchSection .filter span:hover {
+  text-decoration: underline;
 }
 
 
