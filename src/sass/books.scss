@@ -39,8 +39,8 @@
 			font-weight: 600;
 			text-transform: uppercase;
 			line-height: 18px;
-    		color: $h2-color;
-    		white-space: pre-wrap;   		
+    		color: $h2-color;  
+    		white-space: pre-wrap;  		
 		}
 		h3{
 			flex: 1 1 20px;
@@ -55,7 +55,7 @@
 			color: $level-color;
 		}
 		.description{
-			flex: 2 1 70px;
+			flex: 5 1 70px;
 			font-size: $font-size - 1;
 			line-height: 20px; 
 			padding-bottom: 10px;

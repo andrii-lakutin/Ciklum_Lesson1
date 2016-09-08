@@ -440,9 +440,9 @@ header .headerRight .question {
 }
 
 .books .book .description {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 70px;
-          flex: 2 1 70px;
+  -webkit-box-flex: 5;
+      -ms-flex: 5 1 70px;
+          flex: 5 1 70px;
   font-size: 13px;
   line-height: 20px;
   padding-bottom: 10px;

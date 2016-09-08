@@ -5,3 +5,5 @@
 
 
 #OR JUST CLICK HERE http://lakutin.pp.ua/ciklum_les1/
+
+Поиск работает по авторам, уровням, названиям.
