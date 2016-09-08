@@ -1,0 +1,30 @@
+$hr-color: rgba(240, 240, 240, 0.4);
+$footer-text: white; 
+$link: #0088cc;
+
+$font-size-footer: 10px;
+$open-sans: 'Open Sans', sans-serif;
+
+footer{
+	font-family: $open-sans;
+	text-align: center;
+	font-size: $font-size-footer; 
+	hr{
+		width: 75%; 
+		border-top: 1px solid rgba(240, 240, 240, 0.4);
+    	border-bottom: none;
+	}
+	img{
+		width: 150px;
+		height: 29px;  
+	}
+	p{
+		color: $footer-text;
+		line-height: $font-size-footer + 3; 
+	}
+	a{
+		text-decoration: none;
+		color: $link;
+		line-height: $font-size-footer + 28; 
+	}
+}

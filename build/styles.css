@@ -453,5 +453,33 @@ header .headerRight .question {
   white-space: pre-wrap;
 }
 
+footer {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 10px;
+}
+
+footer hr {
+  width: 75%;
+  border-top: 1px solid rgba(240, 240, 240, 0.4);
+  border-bottom: none;
+}
+
+footer img {
+  width: 150px;
+  height: 29px;
+}
+
+footer p {
+  color: white;
+  line-height: 13px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0088cc;
+  line-height: 38px;
+}
+
 
 /*# sourceMappingURL=styles.css.map*/

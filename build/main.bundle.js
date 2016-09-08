@@ -81,6 +81,10 @@
 	var _books = __webpack_require__(12);
 	
 	var _books2 = _interopRequireDefault(_books);
+	
+	var _footer = __webpack_require__(81);
+	
+	var _footer2 = _interopRequireDefault(_footer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1649,6 +1653,12 @@
 	  } catch(e){ /* empty */ }
 	  return safe;
 	};
+
+/***/ },
+/* 81 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
