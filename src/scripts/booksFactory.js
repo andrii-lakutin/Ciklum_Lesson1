@@ -3,14 +3,14 @@ import {httpGet} from'./getData';
 httpGet("./src/data/books.json")
 	.then(
 	response => {
-		CreateBook(JSON.parse(response));
+		CreateBooks(JSON.parse(response).books);
 	},
 	error => console.log(`Rejected: ${error}`)
 	);
 
-function CreateBook (json){
+export function CreateBooks(json){
 	// массив объектов книг
-	let books = json.books;
+	let books = json;
 	const BOOKS_PLACE_IN_DOM = document.querySelector('.books');
 
 	console.log(books);

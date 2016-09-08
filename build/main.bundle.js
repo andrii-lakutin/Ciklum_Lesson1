@@ -53,6 +53,10 @@
 	var _booksFactory = __webpack_require__(14);
 	
 	var _booksFactory2 = _interopRequireDefault(_booksFactory);
+	
+	var _search = __webpack_require__(83);
+	
+	var _search2 = _interopRequireDefault(_search);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -131,17 +135,22 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.CreateBooks = CreateBooks;
+	
 	var _getData = __webpack_require__(15);
 	
 	(0, _getData.httpGet)("./src/data/books.json").then(function (response) {
-		CreateBook(JSON.parse(response));
+		CreateBooks(JSON.parse(response).books);
 	}, function (error) {
 		return console.log('Rejected: ' + error);
 	});
 	
-	function CreateBook(json) {
+	function CreateBooks(json) {
 		// массив объектов книг
-		var books = json.books;
+		var books = json;
 		var BOOKS_PLACE_IN_DOM = document.querySelector('.books');
 	
 		console.log(books);
@@ -1659,6 +1668,88 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 82 */,
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _getData = __webpack_require__(15);
+	
+	var _booksFactory = __webpack_require__(14);
+	
+	(0, _getData.httpGet)("./src/data/books.json").then(function (response) {
+		all_books = JSON.parse(response).books;
+	}, function (error) {
+		return console.log('Rejected: ' + error);
+	});
+	
+	//JSON
+	var all_books = "JSON from promise";
+	
+	function Search(json) {
+		this.all_books = json;
+		this.searching_books = undefined;
+		this.SEARCH_BTN = document.querySelector('.search input[type="button"]');
+		this.SEARCH_INPUT = document.querySelector('.search input[type="text"]');
+		this.BOOKS_AREA = document.querySelector('.books');
+	}
+	
+	Search.prototype.clearAllBooks = function () {
+		// все книги
+		this.books_in_document = document.querySelectorAll('.book');
+	
+		if (this.books_in_document.length != 0) {
+			for (var i = 0; i < this.books_in_document.length; i++) {
+				this.BOOKS_AREA.removeChild(this.books_in_document[i]);
+			}
+		}
+	};
+	
+	Search.prototype.CreateBooks = function (new_json) {
+		if (new_json.length == 0) {
+			alert('404');
+			(0, _booksFactory.CreateBooks)(all_books);
+		}
+		(0, _booksFactory.CreateBooks)(new_json);
+	};
+	
+	Search.prototype.modifyJSON = function () {
+		var value = this.SEARCH_INPUT.value;
+	
+		this.searching_books = this.all_books.filter(function (item) {
+			// если валью из ипута является частью значение уровня, автора, названия - добавит в новый массив, нет - нет.
+			return item.level.toLowerCase().indexOf(value.toLowerCase()) + 1 || item.author.toLowerCase().indexOf(value.toLowerCase()) + 1 || item.title.toLowerCase().indexOf(value.toLowerCase()) + 1;
+		});
+	};
+	
+	Search.prototype.search = function () {
+		this.clearAllBooks();
+		this.modifyJSON();
+		this.CreateBooks(this.searching_books);
+	};
+	
+	Search.prototype.add_event_listeners = function () {
+		var self = this;
+		this.SEARCH_BTN.onclick = function () {
+			self.search();
+		};
+		this.SEARCH_INPUT.onkeydown = function (e) {
+			if (e.keyCode == 13) {
+				self.search();
+			}
+		};
+	};
+	
+	// Таймаут для того чтобы успеть стащить JSON
+	setTimeout(function () {
+		var search = new Search(all_books);
+		search.add_event_listeners();
+	}, 1000);
+	
+	// Логика вкратце: Есть изначальный JSON, фильтруем его через значение инпута, обнуляем все книги, ренедерим новый JSON.
 
 /***/ }
 /******/ ]);
