@@ -9,8 +9,13 @@ $main-font: 'Helvetica Neue',Arial,sans-serif;
 	font-size: 13px; 
 	max-width: 1117px;
 	margin: 0 auto;  
+	padding: 20px;
 	padding-top: 150px; 
-	background: $background; 
+	background: $background;
+		@media screen and (max-width: 700px){
+			// убираем отступ так как header уже не fixed.
+			padding-top: 20px; 
+		}  
 	.pythonBooks{
 		color: white;
 		.seeAlso{
@@ -26,7 +31,6 @@ $main-font: 'Helvetica Neue',Arial,sans-serif;
 		margin-top: 15px;
 		// я попробовал заюзать &, но у меня не вышло) 
 		input{
-			cursor: pointer;
 			border: 0;
 			padding: 9px;
 		}
@@ -36,6 +40,7 @@ $main-font: 'Helvetica Neue',Arial,sans-serif;
 			background: $search-bg;
 		}
 		input[type="button"]{
+			cursor: pointer;
 			flex: 1 1 auto;
 			background: $theme;
 		}

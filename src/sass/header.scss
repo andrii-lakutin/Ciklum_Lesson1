@@ -2,7 +2,9 @@ $header: #EEDB59;
 $shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
 $twitter-bg: #1B95E0;
 $twitterAndQuestion: white;
+$header-mid: #2f2e2d;
 
+$font-size: 13px;
 $font-header: 'Helvetica Neue',Arial,sans-serif;
 
 header {
@@ -10,50 +12,69 @@ header {
 	width: 100%; 
 	background: $header;
 	display: flex;
-	justify-content: space-between; 
+	justify-content: space-between;
+	font-family: $font-header; 
+	@media screen and (max-width: 700px){
+			// Остался 1 элемент, его выравниваем по центру, перестаем быть fixed на телефона не удобно.
+			justify-content: center;
+			position: static;
+		} 
 	a{
 		img{
 			width: 113px;
 			height: 113px;  
 		}
+		@media screen and (max-width: 700px){
+			display: none;
+		}
 	}
 	.headerMid{
 		align-self: center;
 		text-align: center;
+		padding: 10px 0px; 
 		img{
 			width: 200px; 
 			height: 50px; 
 		}
 		h1{
 			text-shadow: $shadow; 
+			font-size: $font-size; 
+			line-height: $font-size + 5; 
+			color: $header-mid;
 		}
 		a{
 			text-decoration: none;
 			color: #9e8c09;
-			text-shadow: $shadow;
+			text-shadow: $shadow; 
+			font-size: $font-size - 1; 
 		}
 	}
 	.headerRight{
 		display: flex;
 		align-items: center;
 		.twitter{
-			font-family: $font-header; 
 			border-radius: 2px;  
 			text-align: center;
 			line-height: 20px;
 			font-weight: 600;  
-			font-size: 11px; 
+			font-size: $font-size - 2; 
 			background: $twitter-bg;
 			color: $twitterAndQuestion;
 			width: 62px;
-			height: 20px;  
+			height: 20px; 
+			cursor: pointer; 
 		}
 		.question{
 			margin-left: 30px;
 			margin-right: 50px;  
 			color: rgba($twitterAndQuestion, 0.9);
 			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-			font: bold 26px $font-header;
+			font-size: $font-size + 13;
+			font-weight: 600;
+			cursor: pointer; 
+		}
+		@media screen and (max-width: 700px){
+			display: none;
 		}
 	}
 }
