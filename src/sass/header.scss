@@ -1,11 +1,4 @@
-$header: #EEDB59;
-$shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
-$twitter-bg: #1B95E0;
-$twitterAndQuestion: white;
-$header-mid: #2f2e2d;
-
-$font-size: 13px;
-$font-header: 'Helvetica Neue',Arial,sans-serif;
+@import 'variables.scss';
 
 header {
 	position: fixed;

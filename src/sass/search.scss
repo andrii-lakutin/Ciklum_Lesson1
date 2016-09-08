@@ -1,8 +1,4 @@
-$background: #323330;
-$search-bg: #252624;
-$theme: #EEDB59;
-
-$main-font: 'Helvetica Neue',Arial,sans-serif;
+@import 'variables.scss';
 
 .searchSection{
 	font-family: $main-font;

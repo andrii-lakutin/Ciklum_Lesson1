@@ -1,10 +1,4 @@
-$description-color: white; 
-$h2-color: #efa121;
-$img-border-color: white;
-$author-color: #cfb798;
-$level-color: white;
-
-$font-size: 14px;
+@import 'variables.scss';
 
 .books{
 	min-height: 65vh;
@@ -26,7 +20,7 @@ $font-size: 14px;
 		}
 		img{
 			border: 3px solid $img-border-color;
-			max-width: 140px;
+			width: 140px;
 			height: 184px;  
 		}
 		.info{
@@ -36,7 +30,7 @@ $font-size: 14px;
 			flex-flow: column wrap;
 			white-space: nowrap;
     		overflow: hidden;
-    		text-overflow: ellipsis;
+    		text-overflow: ellipsis; 
 		}
 		h2{
 			flex: 1 1 20px;
@@ -56,7 +50,7 @@ $font-size: 14px;
 		}
 		.level{
 			flex: 1 1 15px;	
-			font-size: $font-size -2;  
+			font-size: $font-size - 2;  
 			color: $level-color;
 		}
 		.description{

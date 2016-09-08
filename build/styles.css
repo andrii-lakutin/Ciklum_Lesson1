@@ -179,8 +179,8 @@ header .headerMid img {
 
 header .headerMid h1 {
   text-shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 19px;
   color: #2f2e2d;
 }
 
@@ -188,7 +188,7 @@ header .headerMid a {
   text-decoration: none;
   color: #9e8c09;
   text-shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 header .headerRight {
@@ -205,7 +205,7 @@ header .headerRight .twitter {
   text-align: center;
   line-height: 20px;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   background: #1B95E0;
   color: white;
   width: 62px;
@@ -218,7 +218,7 @@ header .headerRight .question {
   margin-right: 50px;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  font-size: 26px;
+  font-size: 27px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -389,7 +389,7 @@ header .headerRight .question {
 
 .books .book img {
   border: 3px solid white;
-  max-width: 140px;
+  width: 140px;
   height: 184px;
 }
 
@@ -435,7 +435,7 @@ header .headerRight .question {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 15px;
           flex: 1 1 15px;
-  font-size: 14px -2;
+  font-size: 12px;
   color: white;
 }
 
