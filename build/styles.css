@@ -355,7 +355,8 @@ header .headerRight .question {
 
 .books {
   min-height: 65vh;
-  max-width: 1117px;
+  max-width: 1200px;
+  padding: 0px 5px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,7 +371,6 @@ header .headerRight .question {
 .books .book {
   margin: 20px;
   margin-left: 0px;
-  max-width: 259px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 279px;
           flex: 1 1 279px;
@@ -379,6 +379,7 @@ header .headerRight .question {
   display: flex;
   -ms-flex-flow: row;
       flex-flow: row;
+  overflow: hidden;
 }
 
 .books .book a {
@@ -404,7 +405,6 @@ header .headerRight .question {
   -ms-flex-flow: column wrap;
       flex-flow: column wrap;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 

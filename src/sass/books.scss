@@ -2,7 +2,8 @@
 
 .books{
 	min-height: 65vh;
-	max-width: 1117px;
+	max-width: 1200px;
+	padding: 0px 5px; 
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
@@ -11,10 +12,10 @@
 	.book{
 		margin: 20px;
 		margin-left: 0px; 
-		max-width: 259px; 
 		flex: 1 1 279px; 
 		display: flex;
 		flex-flow: row;
+		overflow: hidden;
 		a{
 			flex: 1 1 140px;
 		}
@@ -29,7 +30,7 @@
 			display: flex;
 			flex-flow: column wrap;
 			white-space: nowrap;
-    		overflow: hidden;
+    		// overflow: hidden;
     		text-overflow: ellipsis; 
 		}
 		h2{
