@@ -203,7 +203,7 @@ header .headerRight .question {
 .searchSection {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
-  width: 1117px;
+  max-width: 1117px;
   margin: 0 auto;
   padding-top: 150px;
   background: #323330;
@@ -326,34 +326,95 @@ header .headerRight .question {
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .books .book {
-  max-width: 279px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 20px;
+  margin-left: 0px;
+  max-width: 259px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 279px;
           flex: 1 1 279px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+}
+
+.books .book a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 140px;
+          flex: 1 1 140px;
 }
 
 .books .book img {
-  width: 140px;
+  border: 3px solid white;
+  max-width: 140px;
   height: 184px;
 }
 
-.books .book h2 {
-  font: 400 16px 'Open Sans Condensed', sans-serif;
-  line-height: 18px;
-  color: #efa121;
+.books .book .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.books .book h2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20px;
+          flex: 1 1 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: #efa121;
+  white-space: pre-wrap;
+}
+
+.books .book h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20px;
+          flex: 1 1 20px;
+  font-size: 12px;
+}
+
+.books .book h3 a {
+  color: #cfb798;
+}
+
+.books .book .level {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15px;
+          flex: 1 1 15px;
+  font-size: 14px -2;
+  color: white;
+}
+
 .books .book .description {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 70px;
+          flex: 2 1 70px;
+  font-size: 13px;
+  line-height: 20px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+  color: white;
   height: 70px;
+  white-space: pre-wrap;
 }
 
 

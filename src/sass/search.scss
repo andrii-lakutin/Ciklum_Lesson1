@@ -7,7 +7,7 @@ $main-font: 'Helvetica Neue',Arial,sans-serif;
 .searchSection{
 	font-family: $main-font;
 	font-size: 13px; 
-	width: 1117px;
+	max-width: 1117px;
 	margin: 0 auto;  
 	padding-top: 150px; 
 	background: $background; 

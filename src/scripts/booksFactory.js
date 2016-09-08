@@ -18,10 +18,10 @@ function CreateBook (json){
 		let book = document.createElement('div');
 		book.className = "book"; 
 		book.innerHTML = '<a href='+item.url+'><img src='+item.cover+'></a>'
-						+'<h2>'+item.title+'</h2>'
+						+'<div class="info"><h2>'+item.title+'</h2>'
 						+'<h3><a href='+ item.authorUrl +'>'+ item.author+'</a></h3>'
 						+'<p class="level">'+item.level+'</p>'
-						+'<p class="description">'+item.info+'</p>' ;
+						+'<p class="description">'+item.info+'</p></div>' ;
 		BOOKS_PLACE_IN_DOM.appendChild(book);
 	});
 };

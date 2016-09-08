@@ -1,34 +1,74 @@
+$description-color: white; 
+$h2-color: #efa121;
+$img-border-color: white;
+$author-color: #cfb798;
+$level-color: white;
+
+$font-size: 14px;
+
 .books{
 	min-height: 65vh;
 	max-width: 1117px;
 	margin: 0 auto;
 	display: flex;
-	flex-flow: row wrap;  
+	flex-flow: row wrap;
+	justify-content: space-around; 
+	font-family: 'Open Sans Condensed', sans-serif;
 	.book{
-		max-width: 279px; 
+		margin: 20px;
+		margin-left: 0px; 
+		max-width: 259px; 
+		flex: 1 1 279px; 
 		display: flex;
-		flex: 1 1 279px;
+		flex-flow: row;
+		a{
+			flex: 1 1 140px;
+		}
 		img{
-			width: 140px;
+			border: 3px solid $img-border-color;
+			max-width: 140px;
 			height: 184px;  
 		}
-		h2{
-			font: 400 16px 'Open Sans Condensed', sans-serif;
-			line-height: 18px;
-    		color: #efa121;
-    		//отображать слово которое не влезает, обрывая его точками
-    		white-space: nowrap;
+		.info{
+			flex: 1 1 auto;
+			padding: 0px 10px;
+			display: flex;
+			flex-flow: column wrap;
+			white-space: nowrap;
     		overflow: hidden;
     		text-overflow: ellipsis;
 		}
+		h2{
+			flex: 1 1 20px;
+			font-size: $font-size;
+			font-weight: 600;
+			text-transform: uppercase;
+			line-height: 18px;
+    		color: $h2-color;
+    		white-space: pre-wrap;   		
+		}
 		h3{
-			
+			flex: 1 1 20px;
+			font-size: $font-size - 2; 
+			a{
+				color: $author-color;
+			}
 		}
 		.level{
-			
+			flex: 1 1 15px;	
+			font-size: $font-size -2;  
+			color: $level-color;
 		}
 		.description{
+			flex: 2 1 70px;
+			font-size: $font-size - 1;
+			line-height: 20px; 
+			padding-bottom: 10px;
+			overflow: hidden;
+			margin-top: 15px; 
+			color: $description-color;
 			height: 70px; 
+			white-space: pre-wrap;
 		}
 	}
 }
